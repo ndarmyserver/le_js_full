@@ -10,6 +10,9 @@ function activateGallery() {
     thumbnail.addEventListener("click", function() {
       // Set clicked image as main image.
       let newImageSrc = thumbnail.dataset.largeVersion;
+      let largeVersion = new Image();
+      largeVersion.src = newImageSrc;
+
       mainImage.setAttribute("src", newImageSrc);
       mainImage.setAttribute("alt", thumbnail.alt)
 
